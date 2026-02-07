@@ -68,4 +68,4 @@ SVM: RBF kernel.
 
 To modify these, edit the model_configs list in src/train.py.
 
-## Created by Marwan Tamer on 7-2-2026
+## Created by Marwan Tamer on 7-2-2026 📅
