@@ -1,25 +1,35 @@
-# Bank Customer Churn Prediction
+# 🏦 Bank Customer Churn Prediction
 
-This project implements a machine learning pipeline to predict whether a bank customer will churn based on their profile and activity. It compares multiple models (Logistic Regression, Random Forest, SVM, Decision Tree) and uses MLflow to track experiments, parameters, and metrics.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![MLflow](https://img.shields.io/badge/MLflow-Tracking-green)
+![Scikit-Learn](https://img.shields.io/badge/Library-Scikit_Learn-orange)
 
-# Project Overview
+This project implements a machine learning pipeline to predict whether a bank customer will churn based on their profile and activity. It compares multiple models (**Logistic Regression**, **Random Forest**, **SVM**, **Decision Tree**) and uses **MLflow** to track experiments, parameters, and metrics.
+
+---
+
+## 📋 Project Overview
+
 The goal is to identify customers at risk of exiting. The pipeline handles:
 
-Data Imbalance: Downsamples the majority class to match the minority class.
+* **⚖️ Data Imbalance:** Downsamples the majority class to match the minority class.
+* **🛠️ Preprocessing:** Standard scaling for numerical features and One-Hot encoding for categorical ones.
+* **📊 Experiment Tracking:** Logs accuracy, F1-score, confusion matrices, and model artifacts to a local MLflow server.
 
-Preprocessing: Standard scaling for numerical features and One-Hot encoding for categorical ones.
+---
 
-Experiment Tracking: Logs accuracy, F1-score, confusion matrices, and model artifacts to a local MLflow server.
+## 📂 Structure
 
-# Structure
+```text
 ├── data/
 │   └── Churn_Modelling.csv   # Source dataset
 ├── src/
-│   └── train.py              # Main training script (Monolithic)
+│   └── train.py              # Main training script 
 ├── mlruns/                   # MLflow local storage
 ├── README.md
 └── requirements.txt
-# Setup and Installation
+
+## ⚙️ Setup and Installation
 Clone the repository:
 git clone <repository-url>
 cd <repository-folder>
@@ -30,7 +40,8 @@ source venv/bin/activate  # On Windows: .\venv\Scripts\activate
 
 Install dependencies:
 pip install pandas matplotlib scikit-learn mlflow
-Usage
+
+## 🚀 Usage
 
 Start the MLflow UI:
 Open a terminal and run:
@@ -42,7 +53,7 @@ In a separate terminal (with the environment activated), run:
 python src/train.py
 This will execute 4 runs (Logistic Regression, Decision Tree, Random Forest, SVM) and log the results to the "churn_models_comparison" experiment.
 
-# Models & Configuration
+## 🧠 Models & Configuration
 The script currently tests the following configurations:
 
 Logistic Regression: Standard lbfgs solver.
