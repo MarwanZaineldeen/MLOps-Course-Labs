@@ -28,6 +28,8 @@ The goal is to identify customers at risk of exiting. The pipeline handles:
 ├── mlruns/                   # MLflow local storage
 ├── README.md
 └── requirements.txt
+```
+---
 
 ## ⚙️ Setup and Installation
 Clone the repository:
